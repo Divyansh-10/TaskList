@@ -1,6 +1,6 @@
 
 
-//module.exports.name...here name is what the app.js should use to cal it...so in app.js..use :  var date = getDate();
+//module.exports.name...here name is what the app.js should use to call it...so in app.js..use :  var date = getDate();
 //getDay here is anonymous function
 //getDate() is original method..getDay() is refactored version.
 
@@ -24,7 +24,7 @@ function getDate()
 
 exports.getDay = () =>
 {
-  const options = {
+    const options = {
     weekday : "long" ,
   };
 
