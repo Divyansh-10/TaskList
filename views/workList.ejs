@@ -9,15 +9,15 @@
 
 <body>
 
+
+  <form class="" action="/home" method="get">
+    <button type="submit" name="previous" class = "previous">&#10094</button>
+  </form>
+
+
   <div class="box" id="heading">
-      <h1> Home List </h1>
-
-      <form class="" action="/work" method="get">
-        <button type="submit" name="next" class = "next">&#10095</button>
-      </form>
+      <h1> Work List </h1>
   </div>
-
-
 
 
 
@@ -25,22 +25,21 @@
 
 
 <!-- I can use Label tag here -->
- <% Item.forEach( (item) => {   %>
+ <% Work.forEach( (item) => {   %>
 
-<form action="/delete/home" method="post">
+<form action="/delete/work" method="post">
 
    <div class="item">
      <input type="checkbox" name = "checkbox" value = <%=item._id%> onChange = "this.form.submit()">
      <p><%= item.name%></p>
    </div>
-
-  </form>
+</form>
 
  <% });  %>
 
 
 
-  <form class="item" action="/compose/home" method="post">
+  <form class="item" action="/compose/work" method="post">
     <input type="text" name="item" placeholder="What's up" autocomplete="off">
     <button type="submit" name="button">+</button>
   </form>
